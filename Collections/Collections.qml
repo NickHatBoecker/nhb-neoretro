@@ -120,16 +120,22 @@ FocusScope {
             Keys.onPressed: {
 
                 if (api.keys.isAccept(event)) {
+                    sfxBack.play();
+
                     event.accepted = true;
                     currentMenuIndex = 2
                 }
 
                 if (api.keys.isCancel(event)) {
+                    // Do not play any sound, this case is handled in Menu.qml
+
                     event.accepted = true;
                     currentMenuIndex = 0
                 }
 
                 if (event.key == Qt.Key_Left) {
+                    sfxNav.play();
+
                     event.accepted = true;
                     if (currentCollectionIndex <= 0)
                         if (event.isAutoRepeat)
@@ -142,6 +148,8 @@ FocusScope {
                 }
 
                 if (event.key == Qt.Key_Right) {
+                    sfxNav.play();
+
                     event.accepted = true;
 
                     if (currentCollectionIndex >= allCollections.length - 1)

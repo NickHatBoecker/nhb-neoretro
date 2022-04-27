@@ -170,17 +170,23 @@ FocusScope {
                 Keys.onPressed: {
 
                     if (api.keys.isAccept(event)) {
+                        sfxAccept.play();
+
                         event.accepted = true;
                         api.memory.set("currentMenuIndex", currentMenuIndex)
                         currentGame.launch()
                     }
 
                     if (event.key == Qt.Key_Right) {
+                        sfxNav.play();
+
                         event.accepted = true;
                         home.state = "last_played"
                     }
 
                     if (event.key == Qt.Key_Down && sort_favorites.count > 0) {
+                        sfxNav.play();
+
                         event.accepted = true;
                         lastIsDefault = true
                         home.state = "favorites"
@@ -243,12 +249,16 @@ FocusScope {
                     }
 
                     if (api.keys.isAccept(event)) {
+                        sfxAccept.play();
+
                         event.accepted = true;
                         api.memory.set("currentMenuIndex", currentMenuIndex)
                         currentGame.launch()
                     }
 
                     if (event.key == Qt.Key_Left) {
+                        sfxNav.play();
+
                         event.accepted = true;
                         if ( [0,3].includes(currentLastPlayedIndex) )
                             home.state = "last_played_default"
@@ -257,12 +267,16 @@ FocusScope {
                     }
 
                     if (event.key == Qt.Key_Right) {
+                        sfxNav.play();
+
                         event.accepted = true;
                         if ( [0,1,3,4].includes(currentLastPlayedIndex) )
                             currentLastPlayedIndex++
                     }
 
                     if (event.key == Qt.Key_Down) {
+                        sfxNav.play();
+
                         event.accepted = true;
                         if ( [0,1,2].includes(currentLastPlayedIndex) ) {
                             currentLastPlayedIndex +=3
@@ -275,6 +289,8 @@ FocusScope {
                     }
 
                     if (event.key == Qt.Key_Up) {
+                        sfxNav.play();
+
                         event.accepted = true;
                         if ( [3,4,5].includes(currentLastPlayedIndex) )
                             currentLastPlayedIndex -=3
@@ -350,20 +366,33 @@ FocusScope {
                 }
 
                 if (api.keys.isAccept(event)) {
+                    sfxAccept.play();
+
                     event.accepted = true;
                     api.memory.set("currentMenuIndex", currentMenuIndex)
                     currentGame.launch()
                 }
 
+                if (event.key == Qt.Key_Left) {
+                    sfxNav.play();
+                }
+
+                if (event.key == Qt.Key_Right) {
+                    sfxNav.play();
+                }
+
+                if (event.key == Qt.Key_Down) {
+                    sfxNav.play();
+                }
+
                 if (event.key == Qt.Key_Up) {
+                    sfxNav.play();
+
                     event.accepted = true;
                     home.state = lastIsDefault ? "last_played_default" : "last_played"
                 }
-
             }
-
         }
-
     }
 
     // // Collection logo
@@ -434,8 +463,5 @@ FocusScope {
             topPadding: vpx(1)
             color: "white"
         }
-
-
     }
-
 }

@@ -48,6 +48,7 @@ FocusScope {
                 orientation: ListView.Horizontal
                 currentIndex: currentMenuIndex
                 onCurrentIndexChanged: {
+                    sfxNav.play();
                     api.memory.set("currentMenuIndex", currentMenuIndex)
                 }
 
@@ -199,8 +200,5 @@ FocusScope {
 
             visible: ["home","games"].includes(root.state)
         }
-
-
     }
-
 }

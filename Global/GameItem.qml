@@ -44,23 +44,23 @@ Item {
             fillMode: Image.PreserveAspectFit
         }
 
-        Text {
-            anchors.fill: parent
-            text: model.title
-            font {
-                family: global.fonts.sans
-                weight: Font.Medium
-                pixelSize: vpx(16)
-            }
-            color: "white"
+        // Text {
+        //     anchors.fill: parent
+        //     text: model.title
+        //     font {
+        //         family: global.fonts.sans
+        //         weight: Font.Medium
+        //         pixelSize: vpx(16)
+        //     }
+        //     color: "#000"
 
-            horizontalAlignment : Text.AlignHCenter
-            verticalAlignment : Text.AlignVCenter
-            wrapMode: Text.Wrap
+        //     horizontalAlignment : Text.AlignHCenter
+        //     verticalAlignment : Text.AlignVCenter
+        //     wrapMode: Text.Wrap
 
-            visible: model.assets.logo === ""
-            
-        }
+        //     visible: model.assets.logo === ""
+
+        // }
 
         Rectangle {
             anchors.fill: parent
@@ -135,7 +135,7 @@ Item {
         //     fillMode: Image.PreserveAspectFit
         //     visible: doubleFocus
         // }
-        
+
     }
 
 }

@@ -478,6 +478,8 @@ FocusScope {
                 }
 
                 if (api.keys.isAccept(event)) {
+                    sfxAccept.play();
+
                     event.accepted = true;
                     if (currentGame !== null) {
                         api.memory.set("currentCollectionIndex", currentCollectionIndex)
@@ -488,6 +490,8 @@ FocusScope {
                 }
 
                 if (api.keys.isFilters(event)) {
+                    sfxBack.play();
+
                     event.accepted = true;
                     if (games.state === "all") {
                         games.state = "favorites"
@@ -498,6 +502,8 @@ FocusScope {
                 }
 
                 if (api.keys.isCancel(event)) {
+                    // Do not play any sound, this case is handled in Menu.qml
+
                     event.accepted = true;
                     currentMenuIndex = 1
                 }
@@ -510,7 +516,25 @@ FocusScope {
 
                 }
 
+                if (event.key == Qt.Key_Left ) {
+                    sfxNav.play();
+                }
+
+                if (event.key == Qt.Key_Right) {
+                    sfxNav.play();
+                }
+
+                if (event.key == Qt.Key_Down) {
+                    sfxNav.play();
+                }
+
+                if (event.key == Qt.Key_Up) {
+                    sfxNav.play();
+                }
+
                 if (api.keys.isPageDown(event)) {
+                    sfxNav.play();
+
                     event.accepted = true;
 
                     if (currentCollectionIndex <= 0)
@@ -523,6 +547,8 @@ FocusScope {
                 }
 
                 if (api.keys.isPageUp(event)) {
+                    sfxNav.play();
+
                     event.accepted = true;
 
                     if (currentCollectionIndex >= api.collections.count - 1) {

@@ -366,10 +366,26 @@ FocusScope {
         }
     }
 
-    // SoundEffect {
-    //     id: sfxFlip
-    //     source: "assets/sounds/flip_card.wav"
-    //     volume: 0.5
-    // }
+    ///////////////////
+    // SOUND EFFECTS //
+    ///////////////////
+
+    SoundEffect {
+        id: sfxNav
+        source: "assets/sounds/navigation.wav"
+        volume: 1.0
+    }
+
+    SoundEffect {
+        id: sfxBack
+        source: "assets/sounds/back.wav"
+        volume: 1.0
+    }
+
+    SoundEffect {
+        id: sfxAccept
+        source: "assets/sounds/accept.wav"
+        volume: 1.0
+    }
 
 }
