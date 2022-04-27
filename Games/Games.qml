@@ -113,15 +113,6 @@ FocusScope {
 
                     }
 
-                    // RATING
-                    RatingStars {
-                        readonly property var rating: (currentGame.rating *5).toFixed(1)
-                        anchors {
-                            top: parent.top; topMargin: parent.height * 0.1
-                            right: parent.right
-                        }
-                    }
-
                     // TITLE + DEVELOPER + PLAYERS + GENRES + DESCRIPTION
                     Column {
                         spacing: vpx(10)
