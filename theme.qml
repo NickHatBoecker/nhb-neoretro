@@ -187,7 +187,7 @@ FocusScope {
         "nds":              { manufacturer: "nintendo",             release: "2004",    color: "#B4B4B4", altColor: "#363636" },
         "wii":              { manufacturer: "nintendo",             release: "2006",    color: "#75C4D4", altColor: "#D2EBF0" },
         "wiiware":          { manufacturer: "nintendo",             release: "2008",    color: "#75C4D4", altColor: "#D2EBF0" },
-        "3ds":              { manufacturer: "nintendo",             release: "2011",    color: "#000000", altColor: "#252525" },
+        "3ds":              { manufacturer: "nintendo",             release: "2011",    color: "#dc0019", altColor: "#252525" },
         "wiiu":             { manufacturer: "nintendo",             release: "2012",    color: "#000000", altColor: "#252525" },
         "switch":           { manufacturer: "nintendo",             release: "2017",    color: "#e60012", altColor: "#B10210" },
         "3do":              { manufacturer: "panasonic",            release: "1993",    color: "#000000", altColor: "#252525" },

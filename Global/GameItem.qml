@@ -63,9 +63,11 @@ Item {
         // }
 
         Rectangle {
+            border.color: "#f2992e"
+            border.width: 3
             anchors.fill: parent
-            color: "black"
-            opacity: doubleFocus ? 0.8 : 0
+            color: "#181818"
+            opacity: doubleFocus ? 0.7 : 0
             Behavior on opacity {
                 NumberAnimation { duration: 200; }
             }
