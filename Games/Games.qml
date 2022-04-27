@@ -84,35 +84,6 @@ FocusScope {
                     readonly property var currentGameGenre: currentGame.genre.split(" / ") || ""
                     anchors.fill: parent
 
-                    // RELEASE DATE
-                    Text {
-                        id: txt_releaseYear
-                        anchors {
-                            top: parent.top; topMargin: -vpx(45)
-                        }
-
-                        text: currentGame.releaseYear || "N/A"
-                        font {
-                            family: global.fonts.sans
-                            weight: Font.Black
-                            italic: true
-                            pixelSize: vpx(140)
-                        }
-                        color: "#F0F0F0"
-
-                        Behavior on text {
-                            PropertyAnimation {
-                                target: txt_releaseYear
-                                property: "opacity"
-                                from: 0
-                                to: 1
-                                duration: 600
-                                easing.type: Easing.OutExpo
-                            }
-                        }
-
-                    }
-
                     // TITLE + DEVELOPER + PLAYERS + GENRES + DESCRIPTION
                     Column {
                         spacing: vpx(10)
