@@ -48,6 +48,7 @@ FocusScope {
             left: parent.left; leftMargin: parent.width * 0.77
         }
         color: touch_color
+        Image { source: "../assets/bg-pattern/"+dataConsoles[clearShortname(currentCollection.shortName)].pattern; fillMode: Image.Tile; anchors.fill: parent;  opacity: 0.7 }
         Behavior on color {
             ColorAnimation { duration: 250; }
         }
@@ -159,12 +160,12 @@ FocusScope {
                             Rectangle {
                                 width: txt_favorited.contentWidth + vpx(20)
                                 height: txt_favorited.contentHeight + vpx(10)
-                                color: "#ED3496"
+                                color: "#f2992e"
 
                                 Text {
                                     id: txt_favorited
                                     anchors.centerIn: parent
-                                    text: "FAVORISIERT"
+                                    text: "FAVORIT"
                                     font {
                                         family: global.fonts.sans
                                         weight: Font.Black

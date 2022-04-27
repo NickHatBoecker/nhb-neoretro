@@ -119,16 +119,6 @@ Item {
             visible: doubleFocus
         }
 
-        Rectangle {
-            anchors.fill: parent
-            color: "transparent"
-            border {
-                width: vpx(5)
-                color: "#ED3496"
-            }
-            visible: model.favorite && root.state === "games"
-        }
-
         // Image {
         //     width: parent.width * 0.6
         //     sourceSize.width: width

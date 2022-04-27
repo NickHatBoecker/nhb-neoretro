@@ -7,6 +7,7 @@ FocusScope {
 
     readonly property int baseItemWidth: root.width /8
     readonly property var touch_color: dataConsoles[clearShortname(currentCollection.shortName)].color
+    readonly property var bg_pattern: dataConsoles[clearShortname(currentCollection.shortName)].pattern
 
     Behavior on focus {
         ParallelAnimation {
@@ -37,6 +38,7 @@ FocusScope {
             left: parent.left; leftMargin: parent.width * 0.23
         }
         color: touch_color
+        Image { source: "../assets/bg-pattern/"+bg_pattern; fillMode: Image.Tile; anchors.fill: parent;  opacity: 0.7 }
         Behavior on color {
             ColorAnimation { duration: 250; }
         }
