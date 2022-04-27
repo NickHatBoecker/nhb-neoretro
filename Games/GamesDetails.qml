@@ -9,7 +9,7 @@ Item {
 
     width: ListView.view.width
     height: ListView.view.height
-    
+
     // ALL GAMES INFORMATION
     Component {
         id: cpnt_gameList_details
@@ -80,7 +80,7 @@ Item {
                     spacing: vpx(5)
 
                     Text {
-                        text: "Developed by"
+                        text: "Entwickelt von"
                         font {
                             family: global.fonts.sans
                             weight: Font.Light
@@ -112,10 +112,10 @@ Item {
                             width: vpx(1)
                             color: "black"
                         }
-                        
+
                         Text {
                             id: txt_players
-                            property var convertPlayer: model.players > 1 ? "1-"+model.players+" PLAYERS" : "1 PLAYER"
+                            property var convertPlayer: model.players > 1 ? "1-"+model.players+" SPIELER" : "1 SPIELER"
                             anchors.centerIn: parent
                             text: convertPlayer
                             font {
@@ -137,7 +137,7 @@ Item {
                                 width: vpx(1)
                                 color: "black"
                             }
-                            
+
                             Text {
                                 id: txt_genre
                                 anchors.centerIn: parent
@@ -164,7 +164,7 @@ Item {
                         Text {
                             id: txt_game_description
                             width: parent.width
-                            text: (model.description || model.summary) ? (model.description || model.summary) : "No description."
+                            text: (model.description || model.summary) ? (model.description || model.summary) : "Keine Beschreibung vorhanden."
                             font {
                                 family: global.fonts.condensed
                                 weight: Font.Light
@@ -179,11 +179,11 @@ Item {
                 }
 
 
-            }         
+            }
         }
 
     }
-        
+
     Loader {
         id: loader_gameList_details
         width: parent.width * 0.67

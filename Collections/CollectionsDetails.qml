@@ -61,7 +61,7 @@ Item {
                     topMargin: vpx(25)
                     horizontalCenter: img_collection_logo.horizontalCenter
                 }
-                text: modelData.games.count+" games available"
+                text: modelData.games.count > 1 ? modelData.games.count+" Spiele verfügbar" :  modelData.games.count+" Spiel verfügbar"
                 font {
                     family: robotoSlabLight.name
                     pixelSize: vpx(20)

@@ -2,6 +2,7 @@ import QtQuick 2.8
 
 Item {
     property var isCurrentItem: ListView.isCurrentItem
+    property variant menuItemLabels: { 'home': 'START', 'collections': 'PLATTFORMEN', 'games': 'SPIELE' }
 
     width: txt_menu_metrics.width
     height: txt_menu_metrics.height
@@ -25,7 +26,8 @@ Item {
             horizontalCenter: parent.horizontalCenter
         }
 
-        text: modelData.name
+        // text: modelData.name
+        text: menuItemLabels[modelData.name] || modelData.name
         color: "black"
         Behavior on color {
             ColorAnimation { duration: 150; }

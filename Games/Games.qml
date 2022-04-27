@@ -147,7 +147,7 @@ FocusScope {
                             spacing: vpx(5)
 
                             Text {
-                                text: "Developed by"
+                                text: "Entwickelt von"
                                 font {
                                     family: global.fonts.sans
                                     weight: Font.Light
@@ -182,7 +182,7 @@ FocusScope {
 
                                 Text {
                                     id: txt_players
-                                    property var convertPlayer: currentGame.players > 1 ? "1-"+currentGame.players+" PLAYERS" : "1 PLAYER"
+                                    property var convertPlayer: currentGame.players > 1 ? "1-"+currentGame.players+" SPIELER" : "1 SPIELER"
                                     anchors.centerIn: parent
                                     text: convertPlayer
                                     font {
@@ -202,7 +202,7 @@ FocusScope {
                                 Text {
                                     id: txt_favorited
                                     anchors.centerIn: parent
-                                    text: "FAVORITED"
+                                    text: "FAVORISIERT"
                                     font {
                                         family: global.fonts.sans
                                         weight: Font.Black
@@ -250,7 +250,7 @@ FocusScope {
                                 Text {
                                     id: txt_game_description
                                     width: parent.width
-                                    text: (currentGame.description || currentGame.summary) ? (currentGame.description || currentGame.summary) : "No description."
+                                    text: (currentGame.description || currentGame.summary) ? (currentGame.description || currentGame.summary) : "Keine Beschreibung vorhanden."
                                     font {
                                         family: global.fonts.condensed
                                         weight: Font.Light
@@ -430,7 +430,7 @@ FocusScope {
 
     Text {
         anchors.centerIn: parent
-        text: "No favorites."
+        text: "Du hast noch keine Favoriten."
         font {
             family: robotoSlabRegular.name
             pixelSize: vpx(42)
@@ -637,7 +637,7 @@ FocusScope {
         Controls {
             id: button_B
 
-            message: "GO <b>BACK</b>"
+            message: "<b>ZURÜCK</b>"
 
             text_color: "black"
             front_color: "#E6140D"
@@ -648,7 +648,7 @@ FocusScope {
         Controls {
             id: button_X
 
-            message: currentGame !== null && currentGame.favorite ? "REMOVE <b>FAVORITE</b>" : "ADD <b>FAVORITE</b>"
+            message: currentGame !== null && currentGame.favorite ? "ALS <b>FAVORIT</b> ENTFERNEN" : "ALS <b>FAVORITEN</b> HINZUFÜGEN"
 
             text_color: "white"
             front_color: "#1C2C98"
@@ -661,7 +661,7 @@ FocusScope {
         Controls {
             id: button_Y
 
-            message: ( games.state === "all" ) ? "SHOW <b>ALL ·</b> FAVORITES" : "SHOW ALL <b>· FAVORITES</b>"
+            message: ( games.state === "all" ) ? "ZEIGE <b>ALLE ·</b> FAVORITEN" : "ZEIGE ALLE <b>· FAVORITEN</b>"
 
             text_color: "black"
             front_color: "#FDB200"

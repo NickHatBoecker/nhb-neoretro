@@ -109,7 +109,7 @@ FocusScope {
         spacing: vpx(10)
 
         Text {
-            text: ( home.state === "last_played" || home.state === "last_played_default" ) ? "– Continue playing" : "Continue playing"
+            text: ( home.state === "last_played" || home.state === "last_played_default" ) ? "– Weiterspielen" : "Weiterspielen"
             font {
                 family: robotoSlabLight.name
                 pixelSize: vpx(22)
@@ -286,7 +286,7 @@ FocusScope {
         }
 
         Text {
-            text: ( home.state === "favorites" ) ? "– Favorites" : "Favorites"
+            text: ( home.state === "favorites" ) ? "– Favoriten" : "Favoriten"
             font {
                 family: robotoSlabLight.name
                 pixelSize: vpx(22)
@@ -397,9 +397,9 @@ FocusScope {
     //     }
 
     //     button_value: "A"
-    //     message: "PLAY <b>"+currentGame.title+"</b>"
+    //     message: "<b>"+currentGame.title+"</b> SPIELEN"
 
-    //     // message: "PLAY <b>"+currentGame.title+"</b>"
+    //     // message: "<b>"+currentGame.title+"</b> SPIELEN"
 
     //     // text_color: "white"
     //     // front_color: "#00991E"
@@ -424,7 +424,7 @@ FocusScope {
         }
 
         Text {
-            text: "PLAY <b>"+currentGame.title+"</b>"
+            text: "<b>"+currentGame.title+"</b> SPIELEN"
             font {
                 family: global.fonts.sans
                 weight: Font.Light

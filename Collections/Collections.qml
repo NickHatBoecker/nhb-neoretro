@@ -218,7 +218,7 @@ FocusScope {
             left: parent.left; leftMargin: vpx(40)
         }
 
-        message: "GO <b>BACK</b>"
+        message: "<b>ZURÜCK</b>"
 
         text_color: "black"
         front_color: "#E6140D"
@@ -233,7 +233,7 @@ FocusScope {
             right: parent.right; rightMargin: vpx(150)
         }
 
-        message: "<b>"+currentCollection.name+"</b> GAMES"
+        message: "<b>"+currentCollection.name+"</b> SPIELE"
         text_color: "white"
         front_color: "#00991E"
         back_color: "#00991E"
