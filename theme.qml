@@ -306,11 +306,17 @@ FocusScope {
 
 
     Rectangle {
+        function getColor(){
+            if (root.state === "home")
+                return "#000000"
+
+            return "white"
+        }
+
         id: rect_main
         width: parent.width
         height: parent.height
-        color: "white"
-
+        color: getColor()
     }
 
     Home {

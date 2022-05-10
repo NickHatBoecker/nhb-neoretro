@@ -85,7 +85,7 @@ FocusScope {
             left: parent.left; leftMargin: parent.width * 0.08
         }
         color: "#000000"
-        Image { source: "../assets/home-background.jpg"; fillMode: Image.Tile; anchors.fill: parent;  opacity: 0.6 }
+        Image { source: "../assets/home-background.jpg"; fillMode: Image.Tile; anchors.fill: parent;  opacity: 0.4 }
 
         transform: Matrix4x4 {
             property real a: 12 * Math.PI / 180
